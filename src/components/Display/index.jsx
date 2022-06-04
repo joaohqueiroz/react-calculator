@@ -1,9 +1,13 @@
 import React from 'react';
 
-import './style.scss';
+import { Wrapper } from './styles';
 
-function Display() {
-  return <div />;
+function Display({ display }) {
+  return (
+    <Wrapper>
+      <h1>{display}</h1>
+    </Wrapper>
+  );
 }
 
 export default Display;

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './style.scss';
+import { Btn } from './styles';
 
-function Button({ label }) {
-  return <button className="button">{label}</button>;
+function Button({ label, children, onClick }) {
+  return <Btn className="button" onClick={onClick}>{label}{children}</Btn>;
 }
 
 export default Button;

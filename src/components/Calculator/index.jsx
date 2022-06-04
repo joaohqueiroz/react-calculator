@@ -1,30 +1,19 @@
-import React from 'react';
-import Button from '../Button';
+import React, { useState } from 'react'
 
-import './style.scss';
+import Display from '../Display';
+import Keys from '../Keys';
 
-function Calculator() {
-  return (
-    <div className="calculator">
-      <Button label="AC"/>
-      <Button label="/"/>
-      <Button label="7"/>
-      <Button label="8"/>
-      <Button label="9"/>
-      <Button label="*"/>
-      <Button label="4"/>
-      <Button label="5"/>
-      <Button label="6"/>
-      <Button label="-"/>
-      <Button label="1"/>
-      <Button label="2"/>
-      <Button label="3"/>
-      <Button label="+"/>
-      <Button label="0"/>
-      <Button label="."/>
-      <Button label="="/>
-    </div>
-  );
+import { Wrapper } from './styles';
+
+const Calculator = () => {
+    const [display, setDisplay] = useState("Calculator");
+
+    return (
+        <Wrapper>
+            <Display display={display}/>
+            <Keys display={display} setDisplay={(val) => setDisplay(val)}/>
+        </Wrapper>
+    )
 }
 
 export default Calculator;
